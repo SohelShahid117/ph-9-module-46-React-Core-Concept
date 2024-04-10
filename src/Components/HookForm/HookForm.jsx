@@ -6,21 +6,21 @@ const HookForm = () => {
 
     // const [] = useState()
 
-    const [name,handleChange] = useInputState();
-
     const emailState = useInputState('sohelshahid09@gmail.com')
+
+    // const [name,handleChange] = useInputState();
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        console.log('form data',name)
-        // console.log('form data',emailState.value)
+        // console.log('form data',name)
+        console.log('form data',emailState.value)
     }
 
     return (
         <div>
             <form onSubmit={handleSubmit}>
                 {/* <input type="text" /> */}
-                <input value={name} onChange={handleChange} type="text" name="name" />
+                {/* <input value={name} onChange={handleChange} type="text" name="name" /> */}
                 <br />
                 <input {...emailState} type="email" name="email" />
                 <br />
