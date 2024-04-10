@@ -1,5 +1,6 @@
 
 import './App.css'
+import GrandPa from './Components/GrandPa/GrandPa'
 import HookForm from './Components/HookForm/HookForm'
 import ReUseableForm from './Components/ReUseableForm/ReUseableForm'
 import RefForm from './Components/RefForm/RefForm'
@@ -30,23 +31,28 @@ function App() {
 
   return (
     <>
-      <h1>Vite + React</h1>
+      <h1>Form Master</h1>
       {/* <SimpleForm></SimpleForm> */}
       {/* <StatefulForm></StatefulForm> */}
       {/* <RefForm></RefForm> */}
       {/* <HookForm></HookForm> */}
+
       <ReUseableForm FormTitle = {'Sign Up'} handleSubmit={handleSignUpSubmit}>
         <div>
           <h2>Sign Up</h2>
           <p>Pls sign up right now</p>
         </div>
       </ReUseableForm>
+
       <ReUseableForm FormTitle = {'Profile Update'} SubmitBtnText='Update' handleSubmit={handleUpdateProfile}>
         <div>
           <h1>Update PROFILE</h1>
           <p>keep update profile always</p>
         </div>
       </ReUseableForm>
+
+      <GrandPa></GrandPa>
+
     </>
   )
 }
